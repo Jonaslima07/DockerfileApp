@@ -1,0 +1,15 @@
+# Ignorar virtualenv
+.venv/
+
+# Ignorar caches do Python
+__pycache__/
+*.py[cod]
+
+# Ignorar arquivos temporários do editor (opcional)
+*.swp
+*.swo
+*.tmp
+
+# Ignorar arquivos de sistema (exemplo do Windows)
+Thumbs.db
+.DS_Store
