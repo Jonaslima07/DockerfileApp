@@ -4,6 +4,8 @@
 - primeiro você tem que criar os 2 dockerfiles, 1 para a aplicação flask e o outro para o banco de dados:
 
 ```
+# Aplicação Flask
+
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -16,6 +18,8 @@ EXPOSE 5000
 
 CMD ["python3", "app.py"]
 
+
+# Banco de dados
 
 FROM postgres:15-alpine
 
