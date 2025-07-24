@@ -50,22 +50,5 @@ def get_usuario(id):
     return jsonify({'id': usuario.id, 'nome': usuario.nome, 'idade': usuario.idade})
 
 
-@app.route('/usuarios/<int:id>', methods=['PUT'])
-def update_usuario(id):
-    usuario = Usuarios.query.get_or_404(id)
-    data = request.get_json()
-    usuario.nome = data.get('nome', usuario.nome)
-    usuario.idade = data.get('idade', usuario.idade)
-    db.session.commit()
-    return jsonify({'mensagem': 'Usuário atualizado'})
-
-
-@app.route('/usuarios/<int:id>', methods=['DELETE'])
-def delete_usuario(id):
-    usuario = Usuarios.query.get_or_404(id)
-    db.session.delete(usuario)
-    db.session.commit()
-    return jsonify({'mensagem': 'Usuário deletado'})
-
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
