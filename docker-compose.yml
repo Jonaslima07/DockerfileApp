@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  db:
+    build:
+      context: ./postgres
+      dockerfile: postgres.Dockerfile
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: atv4
+    ports:
+      - "5433:5432"
+    networks:
+      - minha-rede
+
+  flask:
+    build:
+      context: ./app
+      dockerfile: python.Dockerfile
+    container_name: flask_app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - minha-rede
+
+networks:
+  minha-rede:
+    driver: bridge

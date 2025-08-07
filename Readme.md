@@ -79,3 +79,8 @@ docker logs flask_app
 
 ![Tela da aplicação](img/Postc.png)
 
+## Links das atividades:
+
+- link: https://github.com/Jonaslima07/ProcureAki-Loadbalancer
+- link: 
+
