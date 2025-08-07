@@ -81,6 +81,6 @@ docker logs flask_app
 
 ## Links das atividades:
 
-- link: https://github.com/Jonaslima07/ProcureAki-Loadbalancer
-- link: 
+- link loadbalancer: https://github.com/Jonaslima07/ProcureAki-Loadbalancer
+- link do docker compose da atividade: https://github.com/Jonaslima07/DockerfileApp/blob/main/docker-compose.yml
 
